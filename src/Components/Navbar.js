@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 import image from "./image1.png";
 
-export default function NavbarLOC() {
+export default function Navbar() {
     // const navigate = useNavigate()
     return ( 
 
@@ -33,8 +33,8 @@ export default function NavbarLOC() {
             <a href="#" className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg" onClick={()=>{}}>About Us</a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-200 mr-2 p-2 hover:bg-yellow-600 rounded-md transition-all duration-500 ease-in-out border-2 border-yellow-600" onClick={()=>{}}>Sign Up <span aria-hidden="true"></span></a>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-200 p-2 hover:bg-yellow-600 rounded-md transition-all duration-500 ease-in-out border-2  border-yellow-600" onClick={()=>{}}>Log in <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" className="text-sm font-semibold leading-6 text-gray-200 mr-2 p-2 hover:bg-red-500 rounded-md transition-all duration-500 ease-in-out border-2 border-red-500" onClick={()=>{}}>Sign Up <span aria-hidden="true"></span></a>
+            <a href="#" className="text-sm font-semibold leading-6 text-gray-200 p-2 hover:bg-red-500 rounded-md transition-all duration-500 ease-in-out border-2  border-red-500" onClick={()=>{}}>Log in <span aria-hidden="true">&rarr;</span></a>
         </div>
         </nav>
         
