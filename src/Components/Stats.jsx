@@ -15,7 +15,7 @@ export default function Stats() {
             </div>
             <div class="mx-auto flex max-w-xs flex-col gap-y-4">
             <dt class="text-base leading-7 text-white">New users annually</dt>
-            <dd class="order-first text-3xl font-semibold tracking-tight text-slate-200 sm:text-5xl">69,000</dd>
+            <dd class="order-first text-3xl font-semibold tracking-tight text-slate-200 sm:text-5xl">63,000</dd>
             </div>
         </dl>
         </div>

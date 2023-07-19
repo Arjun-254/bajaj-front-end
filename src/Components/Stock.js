@@ -47,7 +47,7 @@ export default function Stock() {
           </div>
           <div className="flex flex-col items-end">
             <p className="text-sm font-bold leading-6 text-white">Price</p>
-            <p className="mt-1 text-sm leading-5 text-white bg-red-600 p-1 rounded-lg">% Change</p>
+            <p className="mt-1 text-sm leading-5 text-white bg-red-600 p-1 rounded-md">% Change</p>
           </div>
         </li>
       </Tilt>
@@ -65,7 +65,7 @@ export default function Stock() {
           </div>
           <div className="flex flex-col items-end">
             <p className="text-sm font-bold leading-6 text-white">Price</p>
-            <p className="mt-1 text-sm leading-5 text-white bg-green-600 p-1 rounded-lg">% Change</p>
+            <p className="mt-1 text-sm leading-5 text-white bg-green-600 p-1 rounded-md">% Change</p>
           </div>
         </li>
       </Tilt>

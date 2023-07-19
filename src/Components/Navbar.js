@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import image from "./image1.png";
 
 export default function Navbar() {
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     return ( 
 
     <div className='flex flex-row static '>
@@ -24,17 +24,17 @@ export default function Navbar() {
             </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-            <a href="#" className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg " onClick={()=>{}}>Home</a>
+            <a href="#" className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg " onClick={()=>{navigate("/")}}>Home</a>
 
             {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg">Find Jobs</a>*/}
 
-            <a href="#" className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg" onClick={()=>{}}>FAQs</a> 
+            <a href="#" className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg" onClick={()=>{navigate("/Dashboard")}}>FAQs</a> 
 
             <a href="#" className="text-md font-semibold leading-6 text-gray-200 hover:font-extrabold hover:shadow-xl transition-all ease-in duration-100 p-2 rounded-lg" onClick={()=>{}}>About Us</a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-200 mr-2 p-2 hover:bg-red-500 rounded-md transition-all duration-500 ease-in-out border-2 border-red-500" onClick={()=>{}}>Sign Up <span aria-hidden="true"></span></a>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-200 p-2 hover:bg-red-500 rounded-md transition-all duration-500 ease-in-out border-2  border-red-500" onClick={()=>{}}>Log in <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" className="text-sm font-semibold leading-6 text-gray-200 mr-2 p-2 hover:bg-red-500 rounded-md transition-all duration-500 ease-in-out border-2 border-red-500" onClick={()=>{navigate("/Signup")}}>Sign Up <span aria-hidden="true"></span></a>
+            <a href="#" className="text-sm font-semibold leading-6 text-gray-200 p-2 hover:bg-red-500 rounded-md transition-all duration-500 ease-in-out border-2  border-red-500" onClick={()=>{navigate("/Login")}}>Log in <span aria-hidden="true">&rarr;</span></a>
         </div>
         </nav>
         

@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import Landing from './Pages/Landing';
+import Login from './Pages/Login';
 import Watchlist from './Pages/Watchlist';
+
 import {
   Routes,
   Route,
@@ -9,6 +11,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import { BrowserRouter } from 'react-router-dom';
+import Signup from './Pages/Signup';
+import Preferences from './Pages/Preferences';
 
 function App() {
   return (
@@ -17,8 +21,10 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Landing />} />
-
+        <Route path="/Signup" element={<Signup/>} />
+        <Route path="/Login" element={<Login/>} />
         <Route path="/Dashboard" element={<Watchlist />} />
+        <Route path="/Preferences" element={<Preferences />} />
 
       </Routes>
       </BrowserRouter>
