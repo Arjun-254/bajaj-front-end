@@ -15,7 +15,7 @@ export default function News() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://newsapi.org/v2/everything?q=sensex&from=2023-07-01&to=2023-07-18&sortBy=publishedAt&apiKey=baea8a5de1a74cfc93627e7a4ca3a4d4');
+        const response = await fetch('https://newsapi.org/v2/everything?q=sensex&from=2023-07-01&to=2023-07-23&sortBy=publishedAt&apiKey=baea8a5de1a74cfc93627e7a4ca3a4d4');
         const data = await response.json();
 
         // Sort the articles by publishedAt

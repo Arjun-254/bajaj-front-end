@@ -96,8 +96,8 @@ export default function Watchlist() {
         </div>
 
         <div className='flex flex-row justify-evenly  mt-2 mb-2 w-full'>
-          <Linechart/>
-          <Linechart/>
+          <Linechart symbol={1}/>
+          <Linechart symbol={2}/>
         </div>
 
         <div className='mx-2 mt-6 my-1 flex-grow overflow-y-auto overflow-x-hidden no-scrollbar rounded-2xl'>

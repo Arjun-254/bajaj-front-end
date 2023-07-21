@@ -8,9 +8,10 @@ const animatedComponents = makeAnimated();
 export default function SelectStock() {
 
   const [stockList,setStockList] = useState([]);
+  console.log(stockList)
 
     const options = [
-        { value: 'ADANI ENTERPRISES', label: 'ADANI ENTERPRISES' },
+        { value: 'ADANIENT.NS', label: 'ADANI ENTERPRISES' },
         { value: 'ADANI PORTS & SEZ', label: 'ADANI PORTS & SEZ' },
         { value: 'APOLLO HOSPITALS', label: 'APOLLO HOSPITALS' },
         { value: 'ASIAN PAINTS', label: 'ASIAN PAINTS' },
@@ -61,15 +62,16 @@ export default function SelectStock() {
         { value: 'UPL', label: 'UPL' },
         { value: 'WIPRO', label: 'WIPRO' },
       ];      
-
-      const handleChoose = ()=>{
-        setStockList(null)
+      
+      const handleChoose = (selectedOptions) => {
+        const selectedStocks = selectedOptions.map(option => option.value);
+        setStockList(selectedStocks);
+        console.log(selectedStocks);
       }
 
 
-
   return (
-    <div className='flex flex-col w-5/6 justify-center m-auto'>
+    <div className=''>
         <Select 
         options={options} 
         isMulti 
@@ -77,7 +79,6 @@ export default function SelectStock() {
         components={animatedComponents}
         onChange={handleChoose}
       />
-        <Select options={options} isMulti/>
     </div>
   )
 }

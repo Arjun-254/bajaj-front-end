@@ -94,7 +94,7 @@ function onChange()
             <input
               type="email"
               id="email"
-              className="border border-gray-400 p-2 w-full rounded-lg bg-violet-200 placeholder-black text-black"
+              className="border border-gray-400 p-2 w-full rounded-lg bg-blue-200 placeholder-black text-black"
               value={email}
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
@@ -107,7 +107,7 @@ function onChange()
             <input
               type="password"
               id="password"
-              className="border border-gray-400 p-2 w-full rounded-lg bg-violet-200 placeholder-black text-black "
+              className="border border-gray-400 p-2 w-full rounded-lg bg-blue-200 placeholder-black text-black "
               value={password}
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
@@ -139,13 +139,13 @@ function onChange()
                          e.preventDefault();
                          setFile('')
                      }}
-                         className="webcam-btn btn m-3 text-white hover:bg-violet-800 bg-violet-600 border-violet-600 p-2 rounded-full">
+                         className="webcam-btn btn m-3 text-white hover:bg-blue-800 bg-blue-600 border-blue-600 p-2 rounded-md">
                          Retake Image</button> :
                      <button onClick={async (e) => {
                       e.preventDefault();
                       handleFileChange();
                     }}
-                         className="webcam-btn btn m-3  text-white hover:bg-violet-800 bg-violet-600 border-violet-600 p-2 rounded-md">Capture</button>
+                         className="webcam-btn btn m-3  text-white hover:bg-blue-800 bg-blue-600 border-blue-600 p-2 rounded-md">Capture</button>
                  }
              </div>
          </div>
@@ -166,7 +166,7 @@ function onChange()
          <div className='flex justify-center items-center mt-4'>
           
          {captchaIsDone && 
-          <button type="submit" className="bg-violet-600 text-white py-2 px-4 rounded hover:bg-violet-800 " onClick={handleSubmit}>
+          <button type="submit" className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-800 " onClick={handleSubmit}>
             Login
           </button>}
           </div>
