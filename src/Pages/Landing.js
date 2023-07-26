@@ -1,18 +1,17 @@
-import React from 'react'
-import Navbar from '../Components/Navbar';
-import Statement from '../Components/Statement';
-import Stats from '../Components/Stats';
-
+import React from "react";
+import Navbar from "../Components/Navbar";
+import Statement from "../Components/Statement";
+import Stats from "../Components/Stats";
+import Carousel from "../Components/Carousel";
 
 export default function Landing() {
   return (
-    <div className="flex flex-col bg-gradient-to-r from-gray-900 via-black to-gray-900 bg-full h-max p-10"> 
+    <div className="flex flex-col bg-blue-100 bg-full h-max p-10">
       <Navbar />
       <div className="flex-grow">
         <Statement />
-        <Stats/>
+        <Carousel />
       </div>
     </div>
-  
-  )
+  );
 }

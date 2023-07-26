@@ -5,12 +5,12 @@ import Linechart from '../Components/Linechart'
 import { Typewriter } from 'react-simple-typewriter'
 import StockCarousel from '../Components/StockCarousel';
 import News from '../Components/News';
-import {motion} from 'framer-motion'
+import { useNavigate } from "react-router-dom";
 
 export default function Watchlist() {
 
   const [showWatchlist, setShowWatchlist] = useState(true);
-
+  const navigate = useNavigate()
   // Function to toggle between watchlist and portfolio list
   const toggleList = () => {
     setShowWatchlist(!showWatchlist);
@@ -20,7 +20,8 @@ export default function Watchlist() {
       <Navbar />
 
       <div className="flex flex-col mt-12 p-5 items-left h-screen mb-10 rounded-lg overflow-y-auto overflow-x-hidden sm:w-1/3 bg-gray-800 no-scrollbar">
-        <div className='flex flex-row justify-between'>
+      <button className="hover:scale-105 transition-transform duration-1000 bg-gradient-to-r  from-violet-600 to-blue-600 text-white font-bold p-3 mt-4 rounded-lg" onClick={()=>{navigate("/Recommend")}}>GET YOUR RECOMMENDATIONS</button>
+      <div className='flex flex-row justify-between'>
         <p className="mt-2 text-left text-6xl font-extrabold tracking-tight text-white sm:text-3xl">
           <Typewriter
             words={[showWatchlist ? 'My Watchlist' : 'My Portfolio']}
@@ -40,19 +41,12 @@ export default function Watchlist() {
         <ul role="list" className="mt-4">
           {showWatchlist ? (
             <li>
-              <Stock />
-              <Stock />
-              <Stock />
-              <Stock />
-              <Stock />
+              <Stock ticker='ADANIENT.NS'/>
+              <Stock ticker='INFY.NS'/>
             </li>
           ) : (
             <li>
-              <Stock />
-              <Stock />
-              <Stock />
-              <Stock />
-              <Stock />
+
             </li>
           )}
         </ul>

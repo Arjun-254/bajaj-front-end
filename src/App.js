@@ -13,6 +13,7 @@ import {
 import { BrowserRouter } from 'react-router-dom';
 import Signup from './Pages/Signup';
 import Preferences from './Pages/Preferences';
+import Recommend from './Pages/Recommend';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Login" element={<Login/>} />
         <Route path="/Dashboard" element={<Watchlist />} />
         <Route path="/Preferences" element={<Preferences />} />
+        <Route path="/Recommend" element={<Recommend />} />
 
       </Routes>
       </BrowserRouter>

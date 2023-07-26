@@ -1,23 +1,19 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Components/Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./Rupee_symbol/scene.gltf");
+  const computer = useGLTF("./neuralnet/scene.gltf");
 
   return (
     <mesh>
-      <pointLight position={[0, 10, -5]} intensity={1000} color="blue" />
-      <pointLight position={[0, -10, 5]} intensity={1000} color="blue" />
-      <pointLight position={[0, 10, 5]} intensity={1000} color="blue" />
-      <pointLight position={[0, 10, 5]} intensity={1000} color="blue" />
-
+      <ambientLight intensity={1} color="blue" />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 50 : 35}
-        position={isMobile ? [0, -2, -0.5] : [0, -3, -0.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={isMobile ? 2 : 0.8}
+        position={isMobile ? [0, -3, -0.5] : [0, -0.7, -0.5]}
+        rotation={[0, Math.PI / 2, 0]} // Rotate around the center plane
       />
     </mesh>
   );
@@ -25,6 +21,7 @@ const Computers = ({ isMobile }) => {
 
 const Threemodel = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const canvasRef = useRef();
 
   useEffect(() => {
     const handleMediaQueryChange = (event) => {
@@ -42,13 +39,25 @@ const Threemodel = () => {
 
   return (
     <Canvas
+      ref={canvasRef}
       shadows
       dpr={[1, 2]}
-      camera={{ position: isMobile ? [25, 0, 25] : [20, 3, 5], fov: 20 }}
+      camera={{ position: isMobile ? [25, 0, 25] : [20, 3, 0], fov: 20 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} autoRotate autoRotateSpeed={1} />
+        <OrbitControls
+          enableZoom={false}
+          enablePan={false}
+          rotateSpeed={0.5} // Adjust rotation speed
+          target={[0, 0, 0]} // Set rotation center
+          minDistance={10} // Minimum distance from the center
+          maxDistance={30} // Maximum distance from the center
+          minPolarAngle={Math.PI / 2} // Limit rotation angle from top view
+          maxPolarAngle={Math.PI / 2} // Limit rotation angle from bottom view
+          autoRotate
+          autoRotateSpeed={0.4} // Adjust auto-rotation speed
+        />
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />

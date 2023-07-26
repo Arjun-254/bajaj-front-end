@@ -20,7 +20,7 @@ export default function Linechart({ symbol }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://6339-2401-4900-1c97-f8d2-b8ef-c7bf-3d9f-9aae.ngrok-free.app/yfin/graph', {
+        const response = await fetch('https://ff0a-103-68-38-66.ngrok-free.app/yfin/graph', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

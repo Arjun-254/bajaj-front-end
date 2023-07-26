@@ -39,7 +39,7 @@ const Signup = () => {
       console.log(password);
       const formData = new FormData();
       formData.append('file', file);
-      const res = await axios.post('https://6339-2401-4900-1c97-f8d2-b8ef-c7bf-3d9f-9aae.ngrok-free.app/auth/signup',formData ,{
+      const res = await axios.post('https://ff0a-103-68-38-66.ngrok-free.app/auth/signup',formData ,{
         headers: {
           'Content-Type': 'multipart/form-data',
           email: email,
